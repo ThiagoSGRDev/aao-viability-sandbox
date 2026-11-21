@@ -1,0 +1,21 @@
+{
+  "source": "hook",
+  "agents": {
+    "coordinator": {
+      "state": "working",
+      "updated_at": 1795298582,
+      "last_event": "PreToolUse"
+    },
+    "lucas": {
+      "state": "completed",
+      "updated_at": 1795298572,
+      "last_event": "SubagentStop"
+    },
+    "sofia": {
+      "state": "completed",
+      "updated_at": 1795298577,
+      "last_event": "SubagentStop"
+    }
+  },
+  "generated_at": 1795298582
+}
