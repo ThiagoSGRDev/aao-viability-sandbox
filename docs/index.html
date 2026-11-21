@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AAO viability test</title>
+<style>body{font:14px monospace;margin:16px}pre{white-space:pre-wrap}</style></head>
+<body><h3>Viability test (fictional data)</h3><pre id="o">loading...</pre>
+<script>
+const U="https://raw.githubusercontent.com/ThiagoSGRDev/aao-viability-sandbox/data/status.json";
+const o=document.getElementById("o");
+async function t(){
+  try{
+    const r=await fetch(U,{cache:"no-store"});
+    const j=await r.json();
+    const age=Math.round(Date.now()/1000-j.generated_at);
+    o.textContent=JSON.stringify(j,null,2)+"\nage_seconds="+age+"\nfetched_at="+new Date().toISOString();
+  }catch(e){o.textContent="ERR "+e;}
+}
+t();setInterval(t,60000);
+</script></body></html>
